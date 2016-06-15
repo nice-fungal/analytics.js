@@ -4553,9 +4553,9 @@ exports.cookie = cookie;
  *
  *      domain.levels('http://www.google.co.uk');
  *      // => ["co.uk", "google.co.uk", "www.google.co.uk"]
- * 
+ *
  * Example:
- * 
+ *
  *      domain('http://localhost:3000/baz');
  *      // => ''
  *      domain('http://dev:3000/baz');
@@ -4564,7 +4564,7 @@ exports.cookie = cookie;
  *      // => ''
  *      domain('http://segment.io/baz');
  *      // => 'segment.io'
- * 
+ *
  * @param {String} url
  * @return {String}
  * @api public
@@ -6713,14 +6713,14 @@ module.exports = pick;
 
 /**
  * prevent default on the given `e`.
- * 
+ *
  * examples:
- * 
+ *
  *      anchor.onclick = prevent;
  *      anchor.onclick = function(e){
  *        if (something) return prevent(e);
  *      };
- * 
+ *
  * @param {Event} e
  */
 
@@ -6745,7 +6745,7 @@ var pattern = /(\w+)\[(\d+)\]/
 
 /**
  * Safely encode the given string
- * 
+ *
  * @param {String} str
  * @return {String}
  * @api private
@@ -6761,7 +6761,7 @@ var encode = function(str) {
 
 /**
  * Safely decode the string
- * 
+ *
  * @param {String} str
  * @return {String}
  * @api private
@@ -7135,25 +7135,82 @@ module.exports = {
   'saasquatch': require('analytics.js-integration-saasquatch'),
   'satismeter': require('analytics.js-integration-satismeter'),
   'segmentio': require('analytics.js-integration-segmentio'),
-  'sentry': require('analytics.js-integration-sentry'),
-  'snapengage': require('analytics.js-integration-snapengage'),
-  'spinnakr': require('analytics.js-integration-spinnakr'),
-  'supporthero': require('analytics.js-integration-supporthero'),
-  'taplytics': require('analytics.js-integration-taplytics'),
-  'tapstream': require('analytics.js-integration-tapstream'),
-  'trakio': require('analytics.js-integration-trakio'),
-  'twitter-ads': require('analytics.js-integration-twitter-ads'),
-  'userlike': require('analytics.js-integration-userlike'),
-  'uservoice': require('analytics.js-integration-uservoice'),
-  'vero': require('analytics.js-integration-vero'),
-  'visual-website-optimizer': require('analytics.js-integration-visual-website-optimizer'),
-  'webengage': require('analytics.js-integration-webengage'),
-  'woopra': require('analytics.js-integration-woopra'),
-  'wootric': require('analytics.js-integration-wootric'),
-  'yandex-metrica': require('analytics.js-integration-yandex-metrica')
+  'sentry': require('analytics.js-integration-sentry')
 };
 
-}, {"analytics.js-integration-adroll":79,"analytics.js-integration-adwords":80,"analytics.js-integration-alexa":81,"analytics.js-integration-amplitude":82,"analytics.js-integration-appcues":83,"analytics.js-integration-atatus":84,"analytics.js-integration-autosend":85,"analytics.js-integration-awesm":86,"analytics.js-integration-bing-ads":87,"analytics.js-integration-blueshift":88,"analytics.js-integration-bronto":89,"analytics.js-integration-bugherd":90,"analytics.js-integration-bugsnag":91,"analytics.js-integration-chameleon":92,"analytics.js-integration-chartbeat":93,"analytics.js-integration-clicktale":94,"analytics.js-integration-clicky":95,"analytics.js-integration-comscore":96,"analytics.js-integration-crazy-egg":97,"analytics.js-integration-curebit":98,"analytics.js-integration-customerio":99,"analytics.js-integration-drip":100,"analytics.js-integration-elevio":101,"analytics.js-integration-errorception":102,"analytics.js-integration-evergage":103,"analytics.js-integration-extole":104,"analytics.js-integration-facebook-conversion-tracking":105,"analytics.js-integration-facebook-custom-audiences":106,"analytics.js-integration-foxmetrics":107,"analytics.js-integration-frontleaf":108,"analytics.js-integration-fullstory":109,"analytics.js-integration-gauges":110,"analytics.js-integration-get-satisfaction":111,"analytics.js-integration-google-analytics":112,"analytics.js-integration-google-tag-manager":113,"analytics.js-integration-gosquared":114,"analytics.js-integration-heap":115,"analytics.js-integration-hellobar":116,"analytics.js-integration-hittail":117,"analytics.js-integration-hubspot":118,"analytics.js-integration-improvely":119,"analytics.js-integration-insidevault":120,"analytics.js-integration-inspectlet":121,"analytics.js-integration-intercom":122,"analytics.js-integration-keen-io":123,"analytics.js-integration-kenshoo":124,"analytics.js-integration-kissmetrics":125,"analytics.js-integration-klaviyo":126,"analytics.js-integration-livechat":127,"analytics.js-integration-lucky-orange":128,"analytics.js-integration-lytics":129,"analytics.js-integration-mixpanel":130,"analytics.js-integration-mojn":131,"analytics.js-integration-mouseflow":132,"analytics.js-integration-mousestats":133,"analytics.js-integration-navilytics":134,"analytics.js-integration-nudgespot":135,"analytics.js-integration-olark":136,"analytics.js-integration-optimizely":137,"analytics.js-integration-outbound":138,"analytics.js-integration-perfect-audience":139,"analytics.js-integration-pingdom":140,"analytics.js-integration-piwik":141,"analytics.js-integration-preact":142,"analytics.js-integration-qualaroo":143,"analytics.js-integration-quantcast":144,"analytics.js-integration-rollbar":145,"analytics.js-integration-route":146,"analytics.js-integration-saasquatch":147,"analytics.js-integration-satismeter":148,"analytics.js-integration-segmentio":149,"analytics.js-integration-sentry":150,"analytics.js-integration-snapengage":151,"analytics.js-integration-spinnakr":152,"analytics.js-integration-supporthero":153,"analytics.js-integration-taplytics":154,"analytics.js-integration-tapstream":155,"analytics.js-integration-trakio":156,"analytics.js-integration-twitter-ads":157,"analytics.js-integration-userlike":158,"analytics.js-integration-uservoice":159,"analytics.js-integration-vero":160,"analytics.js-integration-visual-website-optimizer":161,"analytics.js-integration-webengage":162,"analytics.js-integration-woopra":163,"analytics.js-integration-wootric":164,"analytics.js-integration-yandex-metrica":165}],
+}, {
+  "analytics.js-integration-adroll":79,
+  "analytics.js-integration-adwords":80,
+  "analytics.js-integration-alexa":81,
+  "analytics.js-integration-amplitude":82,
+  "analytics.js-integration-appcues":83,
+  "analytics.js-integration-atatus":84,
+  "analytics.js-integration-autosend":85,
+  "analytics.js-integration-awesm":86,
+  "analytics.js-integration-bing-ads":87,
+  "analytics.js-integration-blueshift":88,
+  "analytics.js-integration-bronto":89,
+  "analytics.js-integration-bugherd":90,
+  "analytics.js-integration-bugsnag":91,
+  "analytics.js-integration-chameleon":92,
+  "analytics.js-integration-chartbeat":93,
+  "analytics.js-integration-clicktale":94,
+  "analytics.js-integration-clicky":95,
+  "analytics.js-integration-comscore":96,
+  "analytics.js-integration-crazy-egg":97,
+  "analytics.js-integration-curebit":98,
+  "analytics.js-integration-customerio":99,
+  "analytics.js-integration-drip":100,
+  "analytics.js-integration-elevio":101,
+  "analytics.js-integration-errorception":102,
+  "analytics.js-integration-evergage":103,
+  "analytics.js-integration-extole":104,
+  "analytics.js-integration-facebook-conversion-tracking":105,
+  "analytics.js-integration-facebook-custom-audiences":106,
+  "analytics.js-integration-foxmetrics":107,
+  "analytics.js-integration-frontleaf":108,
+  "analytics.js-integration-fullstory":109,
+  "analytics.js-integration-gauges":110,
+  "analytics.js-integration-get-satisfaction":111,
+  "analytics.js-integration-google-analytics":112,
+  "analytics.js-integration-google-tag-manager":113,
+  "analytics.js-integration-gosquared":114,
+  "analytics.js-integration-heap":115,
+  "analytics.js-integration-hellobar":116,
+  "analytics.js-integration-hittail":117,
+  "analytics.js-integration-hubspot":118,
+  "analytics.js-integration-improvely":119,
+  "analytics.js-integration-insidevault":120,
+  "analytics.js-integration-inspectlet":121,
+  "analytics.js-integration-intercom":122,
+  "analytics.js-integration-keen-io":123,
+  "analytics.js-integration-kenshoo":124,
+  "analytics.js-integration-kissmetrics":125,
+  "analytics.js-integration-klaviyo":126,
+  "analytics.js-integration-livechat":127,
+  "analytics.js-integration-lucky-orange":128,
+  "analytics.js-integration-lytics":129,
+  "analytics.js-integration-mixpanel":130,
+  "analytics.js-integration-mojn":131,
+  "analytics.js-integration-mouseflow":132,
+  "analytics.js-integration-mousestats":133,
+  "analytics.js-integration-navilytics":134,
+  "analytics.js-integration-nudgespot":135,
+  "analytics.js-integration-olark":136,
+  "analytics.js-integration-optimizely":137,
+  "analytics.js-integration-outbound":138,
+  "analytics.js-integration-perfect-audience":139,
+  "analytics.js-integration-pingdom":140,
+  "analytics.js-integration-piwik":141,
+  "analytics.js-integration-preact":142,
+  "analytics.js-integration-qualaroo":143,
+  "analytics.js-integration-quantcast":144,
+  "analytics.js-integration-rollbar":145,
+  "analytics.js-integration-route":146,
+  "analytics.js-integration-saasquatch":147,
+  "analytics.js-integration-satismeter":148,
+  "analytics.js-integration-segmentio":149,
+  "analytics.js-integration-sentry":150}],
 79: [function(require, module, exports) {
 
 /**
@@ -7270,7 +7327,13 @@ AdRoll.prototype.track = function(track) {
   }
 };
 
-}, {"analytics.js-integration":166,"to-snake-case":167,"use-https":168,"each":4,"is":18,"obj-case":42}],
+}, {
+  "analytics.js-integration":166,
+  "to-snake-case":167,
+  "use-https":168,
+  "each":4,
+  "is":18,
+  "obj-case":42}],
 166: [function(require, module, exports) {
 
 /**
@@ -9420,12 +9483,12 @@ var regexp = /[a-z0-9][a-z0-9\-]*[a-z0-9]\.[a-z\.]{2,6}$/i;
 
 /**
  * Get the top domain.
- * 
+ *
  * Official Grammar: http://tools.ietf.org/html/rfc883#page-56
  * Look for tlds with up to 2-6 characters.
- * 
+ *
  * Example:
- * 
+ *
  *      domain('http://localhost:3000/baz');
  *      // => ''
  *      domain('http://dev:3000/baz');
@@ -9434,7 +9497,7 @@ var regexp = /[a-z0-9][a-z0-9\-]*[a-z0-9]\.[a-z\.]{2,6}$/i;
  *      // => ''
  *      domain('http://segment.io/baz');
  *      // => 'segment.io'
- * 
+ *
  * @param {String} url
  * @return {String}
  * @api public
@@ -17530,7 +17593,7 @@ Quantcast.prototype._labels = function(type) {
  * TODO: combatible error handling?
  */
 
-module.exports = function(arr, fn, initial){  
+module.exports = function(arr, fn, initial){
   var idx = 0;
   var len = arr.length;
   var curr = arguments.length == 3
@@ -17540,7 +17603,7 @@ module.exports = function(arr, fn, initial){
   while (idx < len) {
     curr = fn.call(null, curr, arr[idx], ++idx, arr);
   }
-  
+
   return curr;
 };
 }, {}],
@@ -18171,24 +18234,24 @@ function noop() {}
 /**
  * Module dependencies.
  */
- 
+
 var parse = require('querystring').parse;
- 
+
 /**
  * Expose `ads`
  */
- 
+
 module.exports = ads;
- 
+
 /**
  * All the ad query params we look for.
  */
- 
+
 var QUERYIDS = {
   'btid' : 'dataxu',
   'urid' : 'millennial-media'
 };
- 
+
 /**
  * Get all ads info from the given `querystring`
  *
@@ -18196,7 +18259,7 @@ var QUERYIDS = {
  * @return {Object}
  * @api private
  */
- 
+
 function ads(query){
   var params = parse(query);
   for (var key in params) {
@@ -18311,7 +18374,7 @@ function all(){
 
 /**
  * Unserialize the given "stringified" javascript.
- * 
+ *
  * @param {String} val
  * @return {Mixed}
  */
@@ -18780,989 +18843,6 @@ Sentry.prototype.identify = function(identify) {
 };
 
 }, {"analytics.js-integration":166,"is":18}],
-151: [function(require, module, exports) {
-
-/**
- * Module dependencies.
- */
-
-var integration = require('analytics.js-integration');
-var is = require('is');
-var tick = require('next-tick');
-
-/**
- * Expose `SnapEngage` integration.
- */
-
-var SnapEngage = module.exports = integration('SnapEngage')
-  .assumesPageview()
-  .global('SnapABug')
-  .global('SnapEngage')
-  .option('apiKey', '')
-  .option('listen', false)
-  .tag('<script src="//www.snapengage.com/cdn/js/{{ apiKey }}.js">');
-
-/**
- * Integration object for root events.
- */
-
-var integrationContext = {
-  name: 'snapengage',
-  version: '1.0.0'
-};
-
-/**
- * Initialize.
- *
- * http://help.snapengage.com/installation-guide-getting-started-in-a-snap/
- *
- * @api public
- */
-
-SnapEngage.prototype.initialize = function() {
-  var self = this;
-  this.load(function() {
-    if (self.options.listen) self.attachListeners();
-    tick(self.ready);
-  });
-};
-
-/**
- * Loaded?
- *
- * @api private
- * @return {boolean}
- */
-
-SnapEngage.prototype.loaded = function() {
-  return is.object(window.SnapABug) && is.object(window.SnapEngage);
-};
-
-/**
- * Identify.
- *
- * @api private
- * @param {Identify} identify
- */
-
-SnapEngage.prototype.identify = function(identify) {
-  var email = identify.email();
-  if (!email) return;
-  window.SnapABug.setUserEmail(email);
-};
-
-/**
- * Listen for events.
- *
- * https://developer.snapengage.com/javascript-api/setcallback/
- *
- * @api private
- */
-
-SnapEngage.prototype.attachListeners = function() {
-  var self = this;
-
-  // Callback is passed `email, message, type`
-  // TODO: Eventually this might pass information about the chat to Segment
-  window.SnapEngage.setCallback('StartChat', function() {
-    self.analytics.track('Live Chat Conversation Started',
-      {},
-      { context: { integration: integrationContext } });
-  });
-
-  // Callback is passed `agent, message`
-  // TODO: Eventually this might pass information about the message to Segment
-  window.SnapEngage.setCallback('ChatMessageReceived', function(agent) {
-    self.analytics.track('Live Chat Message Received',
-      { agentUsername: agent },
-      { context: { integration: integrationContext } });
-  });
-
-  // Callback is passed `message`
-  // TODO: Eventually this might pass information about the message to Segment
-  window.SnapEngage.setCallback('ChatMessageSent', function() {
-    self.analytics.track('Live Chat Message Sent',
-      {},
-      { context: { integration: integrationContext } });
-  });
-
-  // Callback is passed `type, status`
-  // TODO: Eventually this might pass information about the status to Segment
-  window.SnapEngage.setCallback('Close', function() {
-    self.analytics.track('Live Chat Conversation Ended',
-      {},
-      { context: { integration: integrationContext } });
-  });
-};
-
-}, {"analytics.js-integration":166,"is":18,"next-tick":57}],
-152: [function(require, module, exports) {
-
-/**
- * Module dependencies.
- */
-
-var bind = require('bind');
-var integration = require('analytics.js-integration');
-var when = require('when');
-
-/**
- * Expose `Spinnakr` integration.
- */
-
-var Spinnakr = module.exports = integration('Spinnakr')
-  .assumesPageview()
-  .global('_spinnakr_site_id')
-  .global('_spinnakr')
-  .option('siteId', '')
-  .tag('<script src="//d3ojzyhbolvoi5.cloudfront.net/js/so.js">');
-
-/**
- * Initialize.
- *
- * @api public
- */
-
-Spinnakr.prototype.initialize = function() {
-  window._spinnakr_site_id = this.options.siteId;
-  var loaded = bind(this, this.loaded);
-  var ready = this.ready;
-  this.load(function() {
-    when(loaded, ready);
-  });
-};
-
-/**
- * Loaded?
- *
- * @api private
- * @return {boolean}
- */
-
-Spinnakr.prototype.loaded = function() {
-  return !!window._spinnakr;
-};
-
-}, {"bind":55,"analytics.js-integration":166,"when":198}],
-153: [function(require, module, exports) {
-/**
- * Module dependencies.
- */
-
-var integration = require('analytics.js-integration');
-
-/**
- * Expose `SupportHero` integration.
- */
-
-var SupportHero = module.exports = integration('SupportHero')
-  .assumesPageview()
-  .global('supportHeroWidget')
-  .option('token', '')
-  .option('track', false)
-  .tag('<script src="https://d29l98y0pmei9d.cloudfront.net/js/widget.min.js?k={{ token }}">');
-
-/**
- * Initialize Support Hero.
- *
- * @api public
- */
-
-SupportHero.prototype.initialize = function() {
-  window.supportHeroWidget = {};
-  window.supportHeroWidget.setUserId = window.supportHeroWidget.setUserId || function() {};
-  window.supportHeroWidget.setUserTraits = window.supportHeroWidget.setUserTraits || function() {};
-  this.load(this.ready);
-};
-
-/**
- * Has the Support Hero library been loaded yet?
- *
- * @api private
- * @return {boolean}
- */
-
-SupportHero.prototype.loaded = function() {
-  return !!window.supportHeroWidget;
-};
-
-/**
- * Identify a user.
- *
- * @api public
- * @param {Facade} identify
- */
-
-SupportHero.prototype.identify = function(identify) {
-  var id = identify.userId();
-  var traits = identify.traits();
-  if (id) {
-    window.supportHeroWidget.setUserId(id);
-  }
-  if (traits) {
-    window.supportHeroWidget.setUserTraits(traits);
-  }
-};
-
-}, {"analytics.js-integration":166}],
-154: [function(require, module, exports) {
-
-/**
- * Module dependencies.
- */
-
-var integration = require('analytics.js-integration');
-var is = require('is');
-var keys = require('keys');
-var push = require('global-queue')('_tlq');
-
-/**
- * Expose `Taplytics` integration.
- */
-
-var Taplytics = module.exports = integration('Taplytics')
-  .global('_tlq')
-  .global('Taplytics')
-  .option('token', '')
-  .option('options', {})
-  .tag('<script id="taplytics" src="//cdn.taplytics.com/taplytics.min.js">')
-  .assumesPageview();
-
-/**
- * Initialize Taplytics.
- *
- * @api public
- */
-
-Taplytics.prototype.initialize = function() {
-  var options = this.options.options;
-  var token = this.options.token;
-
-  window._tlq = window._tlq || [];
-
-  push('init', token, options);
-
-  this.load(this.ready);
-};
-
-/**
- * Has the Taplytics library been loaded yet?
- *
- * @api private
- * @return {boolean}
- */
-
-Taplytics.prototype.loaded = function() {
-  return window.Taplytics && is.object(window.Taplytics._in);
-};
-
-/**
- * Identify.
- *
- * @api public
- * @param {Facade} identify
- */
-
-Taplytics.prototype.identify = function(identify) {
-  var userId = identify.userId();
-  var attrs = identify.traits() || {};
-
-  if (userId) attrs.id = userId;
-
-  if (keys(attrs).length) {
-    push('identify', attrs);
-  }
-};
-
-/**
- * Group.
- *
- * @api public
- * @param {Facade} group
- */
-
-Taplytics.prototype.group = function(group) {
-  var attrs = {};
-  var groupId = group.groupId();
-  var traits = group.traits();
-  var user = this.analytics.user();
-  var userId = user.id();
-
-  if (groupId) attrs.groupId = groupId;
-  if (traits) attrs.groupTraits = traits;
-  if (userId) attrs.id = userId;
-
-  if (keys(attrs).length) push('identify', attrs);
-};
-
-/**
- * Track.
- *
- * @api public
- * @param {Facade} track
- */
-
-Taplytics.prototype.track = function(track) {
-  var properties = track.properties() || {};
-  var total = track.revenue() || track.total() || 0;
-
-  push('track', track.event(), total, properties);
-};
-
-/**
-* Page.
-*
-* @api public
-* @param {Facade} page
-*/
-
-Taplytics.prototype.page = function(page) {
-  var category = page.category() || undefined;
-  var name = page.fullName() || undefined;
-  var properties = page.properties() || {};
-
-  push('page', category, name, properties);
-};
-
-/**
-* Reset a user and log them out.
-*
-* @api private
-*/
-
-Taplytics.prototype.reset = function() {
-  push('reset');
-};
-
-}, {"analytics.js-integration":166,"is":18,"keys":73,"global-queue":196}],
-155: [function(require, module, exports) {
-
-/**
- * Module dependencies.
- */
-
-var integration = require('analytics.js-integration');
-var push = require('global-queue')('_tsq');
-var slug = require('slug');
-
-/**
- * Expose `Tapstream` integration.
- */
-
-var Tapstream = module.exports = integration('Tapstream')
-  .assumesPageview()
-  .global('_tsq')
-  .option('accountName', '')
-  .option('trackAllPages', true)
-  .option('trackNamedPages', true)
-  .option('trackCategorizedPages', true)
-  .tag('<script src="//cdn.tapstream.com/static/js/tapstream.js">');
-
-/**
- * Initialize.
- *
- * @api public
- */
-
-Tapstream.prototype.initialize = function() {
-  window._tsq = window._tsq || [];
-  push('setAccountName', this.options.accountName);
-  this.load(this.ready);
-};
-
-/**
- * Loaded?
- *
- * @api private
- * @return {boolean}
- */
-
-Tapstream.prototype.loaded = function() {
-  return !!(window._tsq && window._tsq.push !== Array.prototype.push);
-};
-
-/**
- * Page.
- *
- * @api public
- * @param {Page} page
- */
-
-Tapstream.prototype.page = function(page) {
-  var category = page.category();
-  var opts = this.options;
-  var name = page.fullName();
-
-  // all pages
-  if (opts.trackAllPages) {
-    this.track(page.track());
-  }
-
-  // named pages
-  if (name && opts.trackNamedPages) {
-    this.track(page.track(name));
-  }
-
-  // categorized pages
-  if (category && opts.trackCategorizedPages) {
-    this.track(page.track(category));
-  }
-};
-
-/**
- * Track.
- *
- * @api public
- * @param {Track} track
- */
-
-Tapstream.prototype.track = function(track) {
-  var props = track.properties();
-  // needs events as slugs
-  push('fireHit', slug(track.event()), [props.url]);
-};
-
-}, {"analytics.js-integration":166,"global-queue":196,"slug":172}],
-156: [function(require, module, exports) {
-
-/**
- * Module dependencies.
- */
-
-var alias = require('alias');
-var integration = require('analytics.js-integration');
-
-/**
- * Expose `Trakio` integration.
- */
-
-var Trakio = module.exports = integration('trak.io')
-  .assumesPageview()
-  .global('trak')
-  .option('token', '')
-  .option('trackNamedPages', true)
-  .option('trackCategorizedPages', true)
-  .tag('<script src="//d29p64779x43zo.cloudfront.net/v1/trak.io.min.js">');
-
-/**
- * Options aliases.
- */
-
-var optionsAliases = {
-  initialPageview: 'auto_track_page_view'
-};
-
-/**
- * Initialize.
- *
- * https://docs.trak.io
- *
- * @api public
- */
-
-Trakio.prototype.initialize = function() {
-  var options = this.options;
-  window.trak = window.trak || [];
-  window.trak.io = window.trak.io || {};
-  window.trak.push = window.trak.push || function() {};
-  /* eslint-disable */
-  window.trak.io.load = window.trak.io.load || function(e){var r = function(e){return function(){window.trak.push([e].concat(Array.prototype.slice.call(arguments,0))); }; } ,i=["initialize","identify","track","alias","channel","source","host","protocol","page_view"]; for (var s=0;s<i.length;s++) window.trak.io[i[s]]=r(i[s]); window.trak.io.initialize.apply(window.trak.io,arguments); };
-  /* eslint-enable */
-  window.trak.io.load(options.token, alias(options, optionsAliases));
-  this.load(this.ready);
-};
-
-/**
- * Loaded?
- *
- * @api private
- * @return {boolean}
- */
-
-Trakio.prototype.loaded = function() {
-  return !!(window.trak && window.trak.loaded);
-};
-
-/**
- * Page.
- *
- * @param {Page} page
- */
-
-Trakio.prototype.page = function(page) {
-  var category = page.category();
-  var props = page.properties();
-  var name = page.fullName();
-
-  window.trak.io.page_view(props.path, name || props.title);
-
-  if (category) window.trak.io.channel('category');
-
-  // named pages
-  if (name && this.options.trackNamedPages) {
-    this.track(page.track(name));
-  }
-
-  // categorized pages
-  if (category && this.options.trackCategorizedPages) {
-    this.track(page.track(category));
-  }
-};
-
-/**
- * Trait aliases.
- *
- * http://docs.trak.io/properties.html#special
- */
-
-var traitAliases = {
-  avatar: 'avatar_url',
-  firstName: 'first_name',
-  lastName: 'last_name'
-};
-
-/**
- * Identify.
- *
- * @param {Identify} identify
- */
-
-Trakio.prototype.identify = function(identify) {
-  var traits = identify.traits(traitAliases);
-  var id = identify.userId();
-
-  if (id) {
-    window.trak.io.identify(id, traits);
-  } else {
-    window.trak.io.identify(traits);
-  }
-};
-
-/**
- * Group.
- *
- * @param {String} id (optional)
- * @param {Object} properties (optional)
- * @param {Object} options (optional)
- *
- * TODO: add group
- * TODO: add `trait.company/organization` from trak.io docs http://docs.trak.io/properties.html#special
- */
-
-/**
- * Track.
- *
- * @param {Track} track
- */
-
-Trakio.prototype.track = function(track) {
-  var properties = track.properties();
-  var channel = track.proxy('properties.channel');
-  if (channel) {
-    delete properties.channel;
-    window.trak.io.track(track.event(), channel, properties);
-  } else {
-    window.trak.io.track(track.event(), properties);
-  }
-};
-
-/**
- * Alias.
- *
- * @param {Alias} alias
- */
-
-Trakio.prototype.alias = function(alias) {
-  if (!window.trak.io.distinct_id) return;
-  var from = alias.from();
-  var to = alias.to();
-
-  if (to === window.trak.io.distinct_id()) return;
-
-  if (from) {
-    window.trak.io.alias(from, to);
-  } else {
-    window.trak.io.alias(to);
-  }
-};
-
-}, {"alias":199,"analytics.js-integration":166}],
-157: [function(require, module, exports) {
-
-/**
- * Module dependencies.
- */
-
-var each = require('each');
-var integration = require('analytics.js-integration');
-
-/**
- * Expose `TwitterAds`.
- */
-
-var TwitterAds = module.exports = integration('Twitter Ads')
-  .option('page', '')
-  .tag('<img src="//analytics.twitter.com/i/adsct?txn_id={{ pixelId }}&p_id=Twitter"/>')
-  .mapping('events');
-
-/**
- * Initialize.
- *
- * @api public
- */
-
-TwitterAds.prototype.initialize = function() {
-  this.ready();
-};
-
-/**
- * Page.
- *
- * @api public
- * @param {Page} page
- */
-
-TwitterAds.prototype.page = function() {
-  if (this.options.page) {
-    this.load({ pixelId: this.options.page });
-  }
-};
-
-/**
- * Track.
- *
- * @api public
- * @param {Track} track
- */
-
-TwitterAds.prototype.track = function(track) {
-  var events = this.events(track.event());
-  var self = this;
-  each(events, function(pixelId) {
-    self.load({ pixelId: pixelId });
-  });
-};
-
-}, {"each":4,"analytics.js-integration":166}],
-158: [function(require, module, exports) {
-
-/**
- * Module dependencies.
- */
-
-var Identify = require('facade').Identify;
-var clone = require('clone');
-var integration = require('analytics.js-integration');
-
-/**
- * Expose Userlike integration.
- */
-
-var Userlike = module.exports = integration('Userlike')
-  .assumesPageview()
-  .global('segment_base_info')
-  .global('userlikeConfig')
-  .global('userlikeData')
-  .option('secretKey', '')
-  .option('listen', false)
-  .tag('<script src="//userlike-cdn-widgets.s3-eu-west-1.amazonaws.com/{{ secretKey }}.js">');
-
-/**
- * The context for this integration.
- */
-
-var integrationContext = {
-  name: 'userlike',
-  version: '1.0.0'
-};
-
-/**
- * Initialize.
- *
- * @api public
- */
-
-Userlike.prototype.initialize = function() {
-  var self = this;
-  var user = this.analytics.user();
-  var identify = new Identify({
-    userId: user.id(),
-    traits: user.traits()
-  });
-
-  // FIXME: Should this be a global? Waiting for answer from Userlike folks as
-  // of 5/19/2015
-  //
-  // https://github.com/thomassittig/analytics.js-integrations/commit/e8fb4c067abe7f8549d0e0153504fd24a9aa4b53
-  segment_base_info = clone(this.options);
-
-  segment_base_info.visitor = {
-    name: identify.name(),
-    email: identify.email()
-  };
-
-  if (!window.userlikeData) window.userlikeData = { custom: {} };
-  window.userlikeData.custom.segmentio = segment_base_info;
-
-  this.load(function() {
-    if (self.options.listen) self.attachListeners();
-    self.ready();
-  });
-};
-
-/**
- * Loaded?
- *
- * @return {Boolean}
- */
-
-Userlike.prototype.loaded = function() {
-  return !!(window.userlikeConfig && window.userlikeData);
-};
-
-/**
- * Listen for chat events.
- *
- * TODO: As of 4/17/2015, Userlike doesn't give access to the message body in events.
- * Revisit this/send it when they do.
- */
-
-Userlike.prototype.attachListeners = function() {
-  var self = this;
-  window.userlikeTrackingEvent = function(eventName, globalCtx, sessionCtx) {
-    if (eventName === 'chat_started') {
-      self.analytics.track(
-        'Live Chat Conversation Started',
-        { agentId: sessionCtx.operator_id, agentName: sessionCtx.operator_name },
-        { context: { integration: integrationContext }
-      });
-    }
-    if (eventName === 'message_operator_terminating') {
-      self.analytics.track(
-        'Live Chat Message Sent',
-        { agentId: sessionCtx.operator_id, agentName: sessionCtx.operator_name },
-        { context: { integration: integrationContext }
-      });
-    }
-    if (eventName === 'message_client_terminating') {
-      self.analytics.track(
-        'Live Chat Message Received',
-        { agentId: sessionCtx.operator_id, agentName: sessionCtx.operator_name },
-        { context: { integration: integrationContext }
-      });
-    }
-    if (eventName === 'chat_quit') {
-      self.analytics.track(
-        'Live Chat Conversation Ended',
-        { agentId: sessionCtx.operator_id, agentName: sessionCtx.operator_name },
-        { context: { integration: integrationContext }
-      });
-    }
-  };
-};
-
-}, {"facade":9,"clone":13,"analytics.js-integration":166}],
-159: [function(require, module, exports) {
-
-/**
- * Module dependencies.
- */
-
-var alias = require('alias');
-var convertDates = require('convert-dates');
-var integration = require('analytics.js-integration');
-var push = require('global-queue')('UserVoice');
-var unix = require('to-unix-timestamp');
-
-/**
- * Expose `UserVoice` integration.
- */
-
-var UserVoice = module.exports = integration('UserVoice')
-  .assumesPageview()
-  .global('UserVoice')
-  .global('showClassicWidget')
-  .option('apiKey', '')
-  .option('classic', false)
-  .option('forumId', null)
-  .option('showWidget', true)
-  .option('mode', 'contact')
-  .option('accentColor', '#448dd6')
-  .option('screenshotEnabled', true)
-  .option('smartvote', true)
-  .option('trigger', null)
-  .option('triggerPosition', 'bottom-right')
-  .option('triggerColor', '#ffffff')
-  .option('triggerBackgroundColor', 'rgba(46, 49, 51, 0.6)')
-  // BACKWARD COMPATIBILITY: classic options
-  .option('classicMode', 'full')
-  .option('primaryColor', '#cc6d00')
-  .option('linkColor', '#007dbf')
-  .option('defaultMode', 'support')
-  .option('tabLabel', 'Feedback & Support')
-  .option('tabColor', '#cc6d00')
-  .option('tabPosition', 'middle-right')
-  .option('tabInverted', false)
-  .option('customTicketFields', {})
-  .tag('<script src="//widget.uservoice.com/{{ apiKey }}.js">');
-
-/**
- * When in "classic" mode, on `construct` swap all of the method to point to
- * their classic counterparts.
- *
- * @api private
- */
-
-UserVoice.on('construct', function(integration) {
-  if (!integration.options.classic) return;
-  integration.group = undefined;
-  integration.identify = integration.identifyClassic;
-  integration.initialize = integration.initializeClassic;
-});
-
-/**
- * Initialize.
- *
- * @api public
- */
-
-UserVoice.prototype.initialize = function() {
-  var options = this.options;
-  var opts = formatOptions(options);
-  push('set', opts);
-  push('autoprompt', {});
-
-  if (options.showWidget) {
-    if (options.trigger) {
-      push('addTrigger', options.trigger, opts);
-    } else {
-      push('addTrigger', opts);
-    }
-  }
-
-  this.load(this.ready);
-};
-
-/**
- * Loaded?
- *
- * @api private
- * @return {boolean}
- */
-
-UserVoice.prototype.loaded = function() {
-  return !!(window.UserVoice && window.UserVoice.push !== Array.prototype.push);
-};
-
-/**
- * Identify.
- *
- * @api public
- * @param {Identify} identify
- */
-
-UserVoice.prototype.identify = function(identify) {
-  var traits = identify.traits({ created: 'created_at' });
-  traits = convertDates(traits, unix);
-  push('identify', traits);
-};
-
-/**
- * Group.
- *
- * @api public
- * @param {Group} group
- */
-
-UserVoice.prototype.group = function(group) {
-  var traits = group.traits({ created: 'created_at' });
-  traits = convertDates(traits, unix);
-  push('identify', { account: traits });
-};
-
-/**
- * Initialize (classic).
- *
- * @api private
- */
-
-UserVoice.prototype.initializeClassic = function() {
-  var options = this.options;
-  // part of public api
-  window.showClassicWidget = showClassicWidget;
-  if (options.showWidget) showClassicWidget('showTab', formatClassicOptions(options));
-  this.load(this.ready);
-};
-
-/**
- * Identify (classic).
- *
- * @api private
- * @param {Identify} identify
- */
-
-UserVoice.prototype.identifyClassic = function(identify) {
-  push('setCustomFields', identify.traits());
-};
-
-/**
- * Format the options for UserVoice.
- *
- * @api private
- * @param {Object} options
- * @return {Object}
- */
-
-function formatOptions(options) {
-  return alias(options, {
-    forumId: 'forum_id',
-    accentColor: 'accent_color',
-    smartvote: 'smartvote_enabled',
-    triggerColor: 'trigger_color',
-    triggerBackgroundColor: 'trigger_background_color',
-    triggerPosition: 'trigger_position',
-    screenshotEnabled: 'screenshot_enabled',
-    customTicketFields: 'ticket_custom_fields'
-  });
-}
-
-/**
- * Format the classic options for UserVoice.
- *
- * @api private
- * @param {Object} options
- * @return {Object}
- */
-
-function formatClassicOptions(options) {
-  return alias(options, {
-    forumId: 'forum_id',
-    classicMode: 'mode',
-    primaryColor: 'primary_color',
-    tabPosition: 'tab_position',
-    tabColor: 'tab_color',
-    linkColor: 'link_color',
-    defaultMode: 'default_mode',
-    tabLabel: 'tab_label',
-    tabInverted: 'tab_inverted'
-  });
-}
-
-/**
- * Show the classic version of the UserVoice widget. This method is usually part
- * of UserVoice classic's public API.
- *
- * @api private
- * @param {String} type ('showTab' or 'showLightbox')
- * @param {Object} options (optional)
- */
-
-function showClassicWidget(type, options) {
-  type = type || 'showLightbox';
-  push(type, 'classic_widget', options);
-}
-
-}, {"alias":199,"convert-dates":200,"analytics.js-integration":166,"global-queue":196,"to-unix-timestamp":219}],
 219: [function(require, module, exports) {
 
 /**
@@ -19783,631 +18863,6 @@ function toUnixTimestamp (date) {
   return Math.floor(date.getTime() / 1000);
 }
 }, {}],
-160: [function(require, module, exports) {
-
-/**
- * Module dependencies.
- */
-
-var cookie = require('component/cookie');
-var integration = require('analytics.js-integration');
-var push = require('global-queue')('_veroq');
-
-/**
- * Expose `Vero` integration.
- */
-
-var Vero = module.exports = integration('Vero')
-  .global('_veroq')
-  .option('apiKey', '')
-  .tag('<script src="//d3qxef4rp70elm.cloudfront.net/m.js">');
-
-/**
- * Initialize.
- *
- * https://github.com/getvero/vero-api/blob/master/sections/js.md
- *
- * @api public
- */
-
-Vero.prototype.initialize = function() {
-  // clear default cookie so vero parses correctly.
-  // this is for the tests.
-  // basically, they have window.addEventListener('unload')
-  // which then saves their "command_store", which is an array.
-  // so we just want to create that initially so we can reload the tests.
-  if (!cookie('__veroc4')) cookie('__veroc4', '[]');
-  push('init', { api_key: this.options.apiKey });
-  this.load(this.ready);
-};
-
-/**
- * Loaded?
- *
- * @api private
- * @return {boolean}
- */
-
-Vero.prototype.loaded = function() {
-  return !!(window._veroq && window._veroq.push !== Array.prototype.push);
-};
-
-/**
- * Page.
- *
- * https://www.getvero.com/knowledge-base#/questions/71768-Does-Vero-track-pageviews
- *
- * @api public
- * @param {Page} page
- */
-
-Vero.prototype.page = function() {
-  push('trackPageview');
-};
-
-/**
- * Identify.
- *
- * https://www.getvero.com/api/http/#users
- * https://github.com/getvero/vero-api/blob/master/sections/js.md#user-identification
- *
- * @api public
- * @param {Identify} identify
- */
-
-Vero.prototype.identify = function(identify) {
-  var traits = identify.traits();
-  var email = identify.email();
-  var id = identify.userId();
-  // Both userId and email address are required by Vero's API
-  if (!id || !email) return;
-  push('user', traits);
-};
-
-/**
- * Track.
- *
- * https://www.getvero.com/api/http/#actions
- * https://github.com/getvero/vero-api/blob/master/sections/js.md#tracking-events
- *
- * @api public
- * @param {Track} track
- */
-
-Vero.prototype.track = function(track) {
-  var regex = /[uU]nsubscribe/;
-
-  if (track.event().match(regex)) {
-    push('unsubscribe', { id: track.properties().id });
-  } else {
-    push('track', track.event(), track.properties());
-  }
-};
-
-/**
- * Alias.
- *
- * https://www.getvero.com/api/http/#users
- * https://github.com/getvero/vero-api/blob/master/sections/api/users.md
- *
- * @api public
- * @param {Alias} alias
- */
-
-Vero.prototype.alias = function(alias) {
-  var to = alias.to();
-
-  if (alias.from()) {
-    push('reidentify', to, alias.from());
-  } else {
-    push('reidentify', to);
-  }
-};
-
-}, {"component/cookie":58,"analytics.js-integration":166,"global-queue":196}],
-161: [function(require, module, exports) {
-
-/**
- * Module dependencies.
- */
-
-var each = require('each');
-var integration = require('analytics.js-integration');
-var tick = require('next-tick');
-
-/**
- * Expose `VWO` integration.
- */
-
-var VWO = module.exports = integration('Visual Website Optimizer')
-  .global('_vis_opt_queue')
-  .global('_vis_opt_revenue_conversion')
-  .global('_vwo_exp')
-  .global('_vwo_exp_ids')
-  .option('replay', true)
-  .option('listen', false);
-
-/**
- * The context for this integration.
- */
-
-var integrationContext = {
-  name: 'visual-website-optimizer',
-  version: '1.0.0'
-};
-
-/**
- * Initialize.
- *
- * http://v2.visualwebsiteoptimizer.com/tools/get_tracking_code.php
- */
-
-VWO.prototype.initialize = function() {
-  var self = this;
-  if (this.options.replay) {
-    tick(function() {
-      self.replay();
-    });
-  }
-  if (this.options.listen) {
-    tick(function() {
-      self.roots();
-    });
-  }
-  this.ready();
-};
-
-/**
- * Completed Purchase.
- *
- * https://vwo.com/knowledge/vwo-revenue-tracking-goal
- */
-
-VWO.prototype.completedOrder = function(track) {
-  var total = track.total() || track.revenue() || 0;
-  enqueue(function() {
-    window._vis_opt_revenue_conversion(total);
-  });
-};
-
-/**
- * Replay the experiments the user has seen as traits to all other integrations.
- * Wait for the next tick to replay so that the `analytics` object and all of
- * the integrations are fully initialized.
- */
-
-VWO.prototype.replay = function() {
-  var analytics = this.analytics;
-
-  experiments(function(err, traits) {
-    if (traits) analytics.identify(traits);
-  });
-};
-
-/**
- * Replay the experiments the user has seen as traits to all other integrations.
- * Wait for the next tick to replay so that the `analytics` object and all of
- * the integrations are fully initialized.
- */
-
-VWO.prototype.roots = function() {
-  var analytics = this.analytics;
-
-  rootExperiments(function(err, data) {
-    each(data, function(experimentId, variationName) {
-      analytics.track(
-        'Experiment Viewed',
-        {
-          experimentId: experimentId,
-          variationName: variationName
-        },
-        { context: { integration: integrationContext } }
-      );
-    });
-  });
-};
-
-/**
- * Get dictionary of experiment keys and variations.
- *
- * http://visualwebsiteoptimizer.com/knowledge/integration-of-vwo-with-kissmetrics/
- *
- * @param {Function} fn
- * @return {Object}
- */
-
-function rootExperiments(fn) {
-  enqueue(function() {
-    var data = {};
-    var experimentIds = window._vwo_exp_ids;
-    if (!experimentIds) return fn();
-    each(experimentIds, function(experimentId) {
-      var variationName = variation(experimentId);
-      if (variationName) data[experimentId] = variationName;
-    });
-    fn(null, data);
-  });
-}
-
-/**
- * Get dictionary of experiment keys and variations.
- *
- * http://visualwebsiteoptimizer.com/knowledge/integration-of-vwo-with-kissmetrics/
- *
- * @param {Function} fn
- * @return {Object}
- */
-
-function experiments(fn) {
-  enqueue(function() {
-    var data = {};
-    var ids = window._vwo_exp_ids;
-    if (!ids) return fn();
-    each(ids, function(id) {
-      var name = variation(id);
-      if (name) data['Experiment: ' + id] = name;
-    });
-    fn(null, data);
-  });
-}
-
-/**
- * Add a `fn` to the VWO queue, creating one if it doesn't exist.
- *
- * @param {Function} fn
- */
-
-function enqueue(fn) {
-  window._vis_opt_queue = window._vis_opt_queue || [];
-  window._vis_opt_queue.push(fn);
-}
-
-/**
- * Get the chosen variation's name from an experiment `id`.
- *
- * http://visualwebsiteoptimizer.com/knowledge/integration-of-vwo-with-kissmetrics/
- *
- * @param {String} id
- * @return {String}
- */
-
-function variation(id) {
-  var experiments = window._vwo_exp;
-  if (!experiments) return null;
-  var experiment = experiments[id];
-  var variationId = experiment.combination_chosen;
-  return variationId ? experiment.comb_n[variationId] : null;
-}
-
-}, {"each":4,"analytics.js-integration":166,"next-tick":57}],
-162: [function(require, module, exports) {
-
-/**
- * Module dependencies.
- */
-
-var integration = require('analytics.js-integration');
-var useHttps = require('use-https');
-
-/**
- * Expose `WebEngage` integration.
- */
-
-var WebEngage = module.exports = integration('WebEngage')
-  .assumesPageview()
-  .global('_weq')
-  .global('webengage')
-  .option('widgetVersion', '4.0')
-  .option('licenseCode', '')
-  .tag('http', '<script src="http://cdn.widgets.webengage.com/js/widget/webengage-min-v-4.0.js">')
-  .tag('https', '<script src="https://ssl.widgets.webengage.com/js/widget/webengage-min-v-4.0.js">');
-
-/**
- * Initialize.
- *
- * @api public
- */
-
-WebEngage.prototype.initialize = function() {
-  var _weq = window._weq = window._weq || {};
-  _weq['webengage.licenseCode'] = this.options.licenseCode;
-  _weq['webengage.widgetVersion'] = this.options.widgetVersion;
-  var name = useHttps() ? 'https' : 'http';
-  this.load(name, this.ready);
-};
-
-/**
- * Loaded?
- *
- * @api private
- * @return {boolean}
- */
-
-WebEngage.prototype.loaded = function() {
-  return !!window.webengage;
-};
-
-}, {"analytics.js-integration":166,"use-https":168}],
-163: [function(require, module, exports) {
-
-/**
- * Module dependencies.
- */
-
-var each = require('each');
-var integration = require('analytics.js-integration');
-var toSnakeCase = require('to-snake-case');
-
-/**
- * Expose `Woopra` integration.
- */
-
-var Woopra = module.exports = integration('Woopra')
-  .global('woopra')
-  .option('domain', '')
-  .option('cookieName', 'wooTracker')
-  .option('cookieDomain', null)
-  .option('cookiePath', '/')
-  .option('ping', true)
-  .option('pingInterval', 12000)
-  .option('idleTimeout', 300000)
-  .option('downloadTracking', true)
-  .option('outgoingTracking', true)
-  .option('outgoingIgnoreSubdomain', true)
-  .option('downloadPause', 200)
-  .option('outgoingPause', 400)
-  .option('ignoreQueryUrl', true)
-  .option('hideCampaign', false)
-  .tag('<script src="//static.woopra.com/js/w.js">');
-
-/**
- * Initialize.
- *
- * http://www.woopra.com/docs/setup/javascript-tracking/
- */
-
-Woopra.prototype.initialize = function() {
-  /* eslint-disable */
-  (function(){var i, s, z, w = window, d = document, a = arguments, q = 'script', f = ['config', 'track', 'identify', 'visit', 'push', 'call'], c = function(){var i, self = this; self._e = []; for (i = 0; i < f.length; i++){(function(f){self[f] = function(){self._e.push([f].concat(Array.prototype.slice.call(arguments, 0))); return self; }; })(f[i]); } }; w._w = w._w || {}; for (i = 0; i < a.length; i++){ w._w[a[i]] = w[a[i]] = w[a[i]] || new c(); } })('woopra');
-  /* eslint-enable */
-
-  this.load(this.ready);
-  each(this.options, function(key, value) {
-    key = toSnakeCase(key);
-    if (value == null) return;
-    if (value === '') return;
-    window.woopra.config(key, value);
-  });
-};
-
-/**
- * Loaded?
- *
- * @return {Boolean}
- */
-
-Woopra.prototype.loaded = function() {
-  return !!(window.woopra && window.woopra.loaded);
-};
-
-/**
- * Page.
- *
- * @param {String} category (optional)
- */
-
-Woopra.prototype.page = function(page) {
-  var props = page.properties();
-  var name = page.fullName();
-  if (name) props.title = name;
-  window.woopra.track('pv', props);
-};
-
-/**
- * Identify.
- *
- * @param {Identify} identify
- */
-
-Woopra.prototype.identify = function(identify) {
-  var traits = identify.traits();
-  if (identify.name()) traits.name = identify.name();
-  // `push` sends it off async
-  window.woopra.identify(traits).push();
-};
-
-/**
- * Track.
- *
- * @param {Track} track
- */
-
-Woopra.prototype.track = function(track) {
-  window.woopra.track(track.event(), track.properties());
-};
-
-}, {"each":4,"analytics.js-integration":166,"to-snake-case":167}],
-164: [function(require, module, exports) {
-
-/**
- * Module dependencies.
- */
-
-var integration = require('analytics.js-integration');
-var omit = require('omit');
-
-/**
- * Expose `Wootric` integration.
- */
-
-var Wootric = module.exports = integration('Wootric')
-  .assumesPageview()
-  .option('accountToken', '')
-  .global('wootricSettings')
-  .global('wootric_survey_immediately')
-  .global('wootric')
-  .tag('library', '<script src="//d27j601g4x0gd5.cloudfront.net/segmentioSnippet.js"></script>')
-  .tag('pixel', '<img src="//d8myem934l1zi.cloudfront.net/pixel.gif?account_token={{ accountToken }}&email={{ email }}&created_at={{ createdAt }}&url={{ url }}&random={{ cacheBuster }}">');
-
-/**
- * Initialize Wootric.
- *
- * @api public
- */
-
-Wootric.prototype.initialize = function() {
-  // We use this to keep track of the last page that Wootric has tracked to
-  // ensure we don't accidentally send a duplicate page call
-  this.lastPageTracked = null;
-  window.wootricSettings = window.wootricSettings || {};
-  window.wootricSettings.account_token = this.options.accountToken;
-
-  var self = this;
-  this.load('library', function() {
-    self.ready();
-  });
-};
-
-/**
- * Has the Wootric library been loaded yet?
- *
- * @api private
- * @return {boolean}
- */
-
-Wootric.prototype.loaded = function() {
-  // We are always ready since we are just setting a global variable in initialize
-  return !!window.wootric;
-};
-
-/**
- * Identify a user.
- *
- * @api public
- * @param {Facade} identify
- */
-
-Wootric.prototype.identify = function(identify) {
-  var traits = identify.traits();
-  var email = identify.email();
-  var createdAt = identify.created();
-  var language = traits.language;
-
-  if (createdAt && createdAt.getTime) window.wootricSettings.created_at = createdAt.getTime();
-  if (language) window.wootricSettings.language = language;
-  window.wootricSettings.email = email;
-  // Set the rest of the traits as properties
-  window.wootricSettings.properties = omit(['created', 'createdAt', 'email'], traits);
-
-  window.wootric('run');
-};
-
-/**
- * Page.
- *
- * @api public
- * @param {Page} page
- */
-
-Wootric.prototype.page = function(page) {
-  // Only track page if we haven't already tracked it
-  if (this.lastPageTracked === window.location) {
-    return;
-  }
-
-  // Set this page as the last page tracked
-  this.lastPageTracked = window.location;
-
-  var wootricSettings = window.wootricSettings;
-  this.load('pixel', {
-    accountToken: this.options.accountToken,
-    email: encodeURIComponent(wootricSettings.email),
-    createdAt: wootricSettings.created_at,
-    url: encodeURIComponent(page.url()),
-    cacheBuster: Math.random()
-  });
-};
-
-}, {"analytics.js-integration":166,"omit":205}],
-165: [function(require, module, exports) {
-
-/**
- * Module dependencies.
- */
-
-var bind = require('bind');
-var integration = require('analytics.js-integration');
-var tick = require('next-tick');
-var when = require('when');
-
-/**
- * Expose `Yandex` integration.
- */
-
-var Yandex = module.exports = integration('Yandex Metrica')
-  .assumesPageview()
-  .global('yandex_metrika_callbacks')
-  .global('Ya')
-  .option('counterId', null)
-  .option('clickmap', false)
-  .option('webvisor', false)
-  .tag('<script src="//mc.yandex.ru/metrika/watch.js">');
-
-/**
- * Initialize.
- *
- * http://api.yandex.com/metrika/
- * https://metrica.yandex.com/22522351?step=2#tab=code
- *
- * @api public
- */
-
-Yandex.prototype.initialize = function() {
-  var id = this.options.counterId;
-  var clickmap = this.options.clickmap;
-  var webvisor = this.options.webvisor;
-
-  push(function() {
-    window['yaCounter' + id] = new window.Ya.Metrika({
-      id: id,
-      clickmap: clickmap,
-      webvisor: webvisor
-    });
-  });
-
-  var loaded = bind(this, this.loaded);
-  var ready = this.ready;
-  this.load(function() {
-    when(loaded, function() {
-      tick(ready);
-    });
-  });
-};
-
-/**
- * Loaded?
- *
- * @api private
- * @return {boolean}
- */
-
-Yandex.prototype.loaded = function() {
-  return !!(window.Ya && window.Ya.Metrika);
-};
-
-/**
- * Push a new callback on the global Yandex queue.
- *
- * @api private
- * @param {Function} callback
- */
-
-function push(callback) {
-  window.yandex_metrika_callbacks = window.yandex_metrika_callbacks || [];
-  window.yandex_metrika_callbacks.push(callback);
-}
-
-}, {"bind":55,"analytics.js-integration":166,"next-tick":57,"when":198}],
 5: [function(require, module, exports) {
 module.exports = {
   "name": "analytics",

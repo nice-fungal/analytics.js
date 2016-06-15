@@ -479,92 +479,6 @@ Analytics.prototype.track = function(event, properties, options, fn) {
 };
 
 /**
- * Helper method to track an outbound link that would normally navigate away
- * from the page before the analytics calls were sent.
- *
- * BACKWARDS COMPATIBILITY: aliased to `trackClick`.
- *
- * @param {Element|Array} links
- * @param {string|Function} event
- * @param {Object|Function} properties (optional)
- * @return {Analytics}
- */
-
-Analytics.prototype.trackClick = Analytics.prototype.trackLink = function(links, event, properties) {
-  if (!links) return this;
-  // always arrays, handles jquery
-  if (is.element(links)) links = [links];
-
-  var self = this;
-  each(links, function(el) {
-    if (!is.element(el)) throw new TypeError('Must pass HTMLElement to `analytics.trackLink`.');
-    on(el, 'click', function(e) {
-      var ev = is.fn(event) ? event(el) : event;
-      var props = is.fn(properties) ? properties(el) : properties;
-      var href = el.getAttribute('href')
-        || el.getAttributeNS('http://www.w3.org/1999/xlink', 'href')
-        || el.getAttribute('xlink:href');
-
-      self.track(ev, props);
-
-      if (href && el.target !== '_blank' && !isMeta(e)) {
-        prevent(e);
-        self._callback(function() {
-          window.location.href = href;
-        });
-      }
-    });
-  });
-
-  return this;
-};
-
-/**
- * Helper method to track an outbound form that would normally navigate away
- * from the page before the analytics calls were sent.
- *
- * BACKWARDS COMPATIBILITY: aliased to `trackSubmit`.
- *
- * @param {Element|Array} forms
- * @param {string|Function} event
- * @param {Object|Function} properties (optional)
- * @return {Analytics}
- */
-
-Analytics.prototype.trackSubmit = Analytics.prototype.trackForm = function(forms, event, properties) {
-  if (!forms) return this;
-  // always arrays, handles jquery
-  if (is.element(forms)) forms = [forms];
-
-  var self = this;
-  each(forms, function(el) {
-    if (!is.element(el)) throw new TypeError('Must pass HTMLElement to `analytics.trackForm`.');
-    function handler(e) {
-      prevent(e);
-
-      var ev = is.fn(event) ? event(el) : event;
-      var props = is.fn(properties) ? properties(el) : properties;
-      self.track(ev, props);
-
-      self._callback(function() {
-        el.submit();
-      });
-    }
-
-    // Support the events happening through jQuery or Zepto instead of through
-    // the normal DOM API, because `el.submit` doesn't bubble up events...
-    var $ = window.jQuery || window.Zepto;
-    if ($) {
-      $(el).submit(handler);
-    } else {
-      on(el, 'submit', handler);
-    }
-  });
-
-  return this;
-};
-
-/**
  * Trigger a pageview, labeling the current page with an optional `category`,
  * `name` and `properties`.
  *
@@ -617,21 +531,6 @@ Analytics.prototype.page = function(category, name, properties, options, fn) {
 
   this.emit('page', category, name, properties, options);
   this._callback(fn);
-  return this;
-};
-
-/**
- * FIXME: BACKWARDS COMPATIBILITY: convert an old `pageview` to a `page` call.
- *
- * @param {string} [url]
- * @return {Analytics}
- * @api private
- */
-
-Analytics.prototype.pageview = function(url) {
-  var properties = {};
-  if (url) properties.path = url;
-  this.page(properties);
   return this;
 };
 

@@ -19,7 +19,7 @@
   },
   "main": "dist/analytics.js",
   "scripts": {
-    "dist": "uglifyjs --compress --mangle --screw-ie8 --verbose --stats --output analytics.min.js -- analytics.js"
+    "dist": "uglifyjs --compress --mangle --screw-ie8 --verbose --stats --output dist/analytics.min.js -- analytics.js"
   },
   "dependencies": {
   },

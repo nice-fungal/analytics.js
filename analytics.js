@@ -1,8 +1,6 @@
 (function umd(require){
   if (typeof exports === 'object') {
     module.exports = require('1');
-  } else if (typeof define === 'function' && (define.amd || define.cmd)) {
-    define(function(){ return require('1'); });
   } else {
     this['analytics'] = require('1');
   }

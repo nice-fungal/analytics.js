@@ -182,14 +182,11 @@ var defaults = require('defaults');
 var each = require('each');
 var group = require('./group');
 var is = require('is');
-var isMeta = require('is-meta');
 var keys = require('object').keys;
 var memory = require('./memory');
 var normalize = require('./normalize');
-var on = require('event').bind;
 var pageDefaults = require('./pageDefaults');
 var pick = require('pick');
-var prevent = require('prevent');
 var querystring = require('querystring');
 var size = require('object').length;
 var store = require('./store');
@@ -726,7 +723,7 @@ Analytics.prototype.noConflict = function(){
 };
 
 
-}, {"emitter":8,"facade":9,"after":10,"bind":11,"callback":12,"clone":13,"./cookie":14,"debug":15,"defaults":16,"each":4,"./group":17,"is":18,"is-meta":19,"object":20,"./memory":21,"./normalize":22,"event":23,"./pageDefaults":24,"pick":25,"prevent":26,"querystring":27,"./store":28,"./user":29}],
+}, {"emitter":8,"facade":9,"after":10,"bind":11,"callback":12,"clone":13,"./cookie":14,"debug":15,"defaults":16,"each":4,"./group":17,"is":18,"object":20,"./memory":21,"./normalize":22,"event":23,"./pageDefaults":24,"pick":25,"prevent":26,"querystring":27,"./store":28,"./user":29}],
 8: [function(require, module, exports) {
 
 /**
@@ -1754,9 +1751,6 @@ module.exports = function(proto){
 }, {"obj-case":42}],
 42: [function(require, module, exports) {
 
-var identity = function(_){ return _; };
-
-
 /**
  * Module exports, export
  */
@@ -2165,7 +2159,6 @@ Alias.prototype.userId = function(){
  */
 
 var inherit = require('./utils').inherit;
-var address = require('./address');
 var isEmail = require('is-email');
 var newDate = require('new-date');
 var Facade = require('./facade');
@@ -2317,7 +2310,6 @@ function isEmail (string) {
 }, {}],
 34: [function(require, module, exports) {
 
-var address = require('./address');
 var Facade = require('./facade');
 var isEmail = require('is-email');
 var newDate = require('new-date');
@@ -2325,7 +2317,6 @@ var utils = require('./utils');
 var get = require('obj-case');
 var trim = require('trim');
 var inherit = utils.inherit;
-var clone = utils.clone;
 var type = utils.type;
 
 /**
@@ -2589,7 +2580,6 @@ exports.right = function(str){
 35: [function(require, module, exports) {
 
 var inherit = require('./utils').inherit;
-var clone = require('./utils').clone;
 var type = require('./utils').type;
 var Facade = require('./facade');
 var Identify = require('./identify');
@@ -5452,22 +5442,6 @@ function generate (type) {
   };
 }
 }, {"is-empty":46,"type":47,"component-type":47}],
-19: [function(require, module, exports) {
-module.exports = function isMeta (e) {
-    if (e.metaKey || e.altKey || e.ctrlKey || e.shiftKey) return true;
-
-    // Logic that handles checks for the middle mouse button, based
-    // on [jQuery](https://github.com/jquery/jquery/blob/master/src/event.js#L466).
-    var which = e.which, button = e.button;
-    if (!which && button !== undefined) {
-      return (!button & 1) && (!button & 2) && (button & 4);
-    } else if (which === 2) {
-      return true;
-    }
-
-    return false;
-};
-}, {}],
 20: [function(require, module, exports) {
 
 /**
@@ -9068,36 +9042,6 @@ function pad (number) {
   return n.length === 1 ? '0' + n : n;
 }
 }, {}],
-196: [function(require, module, exports) {
-
-/**
- * Expose `generate`.
- */
-
-module.exports = generate;
-
-
-/**
- * Generate a global queue pushing method with `name`.
- *
- * @param {String} name
- * @param {Object} options
- *   @property {Boolean} wrap
- * @return {Function}
- */
-
-function generate (name, options) {
-  options = options || {};
-
-  return function (args) {
-    args = [].slice.call(arguments);
-    window[name] || (window[name] = []);
-    options.wrap === false
-      ? window[name].push.apply(window[name], args)
-      : window[name].push(args);
-  };
-}
-}, {}],
 197: [function(require, module, exports) {
 
 /**
@@ -9367,16 +9311,11 @@ function toCamelCase (string) {
  * Module dependencies.
  */
 
-var Track = require('facade').Track;
 var defaults = require('defaults');
 var dot = require('obj-case');
-var each = require('each');
 var integration = require('analytics.js-integration');
-var is = require('is');
 var keys = require('object').keys;
 var len = require('object').length;
-var push = require('global-queue')('_gaq');
-var select = require('select');
 var user;
 
 /**
@@ -9659,38 +9598,7 @@ function metrics(obj, data) {
   return ret;
 }
 
-}, {"facade":9,"defaults":192,"obj-case":42,"each":4,"analytics.js-integration":166,"is":18,"object":20,"global-queue":196,"select":204}],
-204: [function(require, module, exports) {
-
-/**
- * Module dependencies.
- */
-
-var toFunction = require('to-function');
-
-/**
- * Filter the given `arr` with callback `fn(val, i)`,
- * when a truthy value is return then `val` is included
- * in the array returned.
- *
- * @param {Array} arr
- * @param {Function} fn
- * @return {Array}
- * @api public
- */
-
-module.exports = function(arr, fn){
-  var ret = [];
-  fn = toFunction(fn);
-  for (var i = 0; i < arr.length; ++i) {
-    if (fn(arr[i], i)) {
-      ret.push(arr[i]);
-    }
-  }
-  return ret;
-};
-
-}, {"to-function":74}],
+}, {"defaults":192,"obj-case":42,"each":4,"analytics.js-integration":166,"is":18,"object":20}],
 205: [function(require, module, exports) {
 /**
  * Expose `omit`.
